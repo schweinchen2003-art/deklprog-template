@@ -1,0 +1,28 @@
+cabal-version:      2.4
+name:               deklprog-template
+version:            0.1.0.0
+
+synopsis: Template for solving Haskell exercises as part of the lecture Deklarative Programmierung
+
+author:             Niels Bunkenburg
+maintainer:         nbu@informatik.uni-kiel.de
+
+extra-source-files: CHANGELOG.md
+
+executable deklprog-template
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    other-modules: Exercises.Week1
+                 , Exercises.Week2
+                 , Exercises.Week3
+                 , Exercises.Week4
+                 , Exercises.Week5
+                 , Exercises.Week6
+
+    -- LANGUAGE extensions used by modules in this package.
+    default-extensions: TemplateHaskell
+    build-depends:    base ^>=4.14.3.0, QuickCheck ^>=2.14.2
+    hs-source-dirs:   src
+    default-language: Haskell2010
+    ghc-options: -Wall -Wincomplete-uni-patterns -Wno-type-defaults -Wno-unused-imports -Wno-unused-matches -Werror 
